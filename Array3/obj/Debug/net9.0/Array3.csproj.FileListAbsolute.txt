@@ -1,0 +1,15 @@
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\bin\Debug\net9.0\Array3.exe
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\bin\Debug\net9.0\Array3.deps.json
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\bin\Debug\net9.0\Array3.runtimeconfig.json
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\bin\Debug\net9.0\Array3.dll
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\bin\Debug\net9.0\Array3.pdb
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.AssemblyInfoInputs.cache
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.AssemblyInfo.cs
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.csproj.CoreCompileInputs.cache
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.sourcelink.json
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.dll
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\refint\Array3.dll
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.pdb
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\Array3.genruntimeconfig.cache
+C:\Users\ramya\OneDrive\Documents\wiptrain\Array3\obj\Debug\net9.0\ref\Array3.dll
