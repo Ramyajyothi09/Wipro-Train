@@ -8,4 +8,4 @@ bin
 *.dll
 *vs
 *csproj
-Day15
+node_modules
