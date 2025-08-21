@@ -1,0 +1,474 @@
+// /*Inheritance --- When a child class is inheriting some of the properties of base class 
+
+// In Inheritane we use some conventions like base class , super class , parent class
+
+// similarly we call the class  who has inherited the features of base class as child class,
+// sub class , derived class  */
+
+// /*Types of Inheritance*/
+// // single inheritance --- There is one base class and one child class
+
+// public class Person
+// {
+//     //properties 
+//     protected string Name { get; set; }
+//     public virtual void Display()
+//     {
+//         Console.WriteLine("Displaying Name you entered :");
+//     }
+
+//     public void setName(string Name)
+//     {
+
+//         this.Name = name;
+//     }
+// }
+
+// // Single Level
+// public class Student : Person
+// {
+
+//     // public Student(string name)
+//     // {
+//     //     Name = name;
+//     // }
+//     public int RollNumber { get; set; }
+
+//     public void Study()
+
+//     { Console.WriteLine(Name + "is studying :"); }
+
+//     static void Main()
+//     {
+
+//         Student stud = new Student();
+//         //stud.Name = "Niti";
+//         stud.setName("Niti");
+//         stud.RollNumber = 2004;
+//         stud.Display();
+//         stud.Study();
+//     }
+
+// }
+
+
+
+// /*Inheritance --- When a child class is inheriting some of the properties of base class 
+
+// In Inheritane we use some conventions like base class , super class , parent class
+
+// similarly we call the class  who has inherited the features of base class as child class,
+// sub class , derived class  */
+
+// /*Types of Inheritance*/
+// // Multilevel inheritance --- There is one base class and one child class and that child will become a base for another child class 
+
+// public class Father
+// { 
+
+ 
+//     public void FatherDetails()
+//     {
+//         Console.WriteLine("Father Details :");
+
+//     }
+// }
+// public class Person : Father
+// {
+//     //properties 
+//     protected string Name { get; set; }
+//     public virtual void Display()
+//     {
+//         Console.WriteLine("Displaying Name you entered :" + Name);
+//     }
+
+//     public void setName(string Name)
+//     {
+
+//         this.Name = name;
+//     }
+// }
+
+
+// public class Student : Person
+// {
+
+//     // public Student(string name)
+//     // {
+//     //     Name = name;
+//     // }
+//     public int RollNumber { get; set; }
+
+//     public void Study()
+
+//     { Console.WriteLine(Name + "is studying :"); }
+
+//     static void Main()
+//     {
+
+//         Student stud = new Student();
+//         //stud.Name = "Niti";
+//         stud.setName("Niti");
+//         stud.RollNumber = 2004;
+//         stud.FatherDetails();
+//         stud.Display();
+//         stud.Study();
+//     }
+
+// }
+
+// // Multi level
+// public class MainProgram
+// {
+//     // static void Main()
+//     // {
+
+//     //     Student stud = new Student("Niti");
+//     //    // stud.Name = "Niti";
+//     //     stud.RollNumber = 2004;
+//     //     stud.Display();
+//     //     stud.Study();
+//     // }
+
+// }
+
+// // there is HR --NameOFHR{get; set;} virtual SalaryDisplay() , AdminIncharge override , Employee  Employee e = new Employee(); e.SalaryDisplay()
+
+
+
+/*Inheritance --- When a child class is inheriting some of the properties of base class 
+
+In Inheritane we use some conventions like base class , super class , parent class
+
+similarly we call the class  who has inherited the features of base class as child class,
+sub class , derived class  */
+
+/*Types of Inheritance*/
+// Hierarchical inheritance --- When multiple child classes inherit the same base class
+
+public class Person 
+{
+    //properties 
+    protected string Name { get; set; }
+    public virtual void Display()
+    {
+        Console.WriteLine("Displaying Name you entered :" + Name);
+    }
+
+    // public void setName(string Name)
+    // {
+
+    //     this.Name = name;
+    // }
+}
+
+
+public class Student : Person
+{
+
+    // public Student(string name)
+    // {
+    //     Name = name;
+    // }
+    public int RollNumber { get; set; }
+
+    public void Study()
+
+    { Console.WriteLine(Name + "is studying :"); }
+
+    // static void Main()
+    // {
+
+    //     Student stud = new Student();
+    //     //stud.Name = "Niti";
+    //     stud.setName("Niti");
+    //     stud.RollNumber = 2004;
+    //     stud.FatherDetails();
+    //     stud.Display();
+    //     stud.Study();
+    // }
+
+}
+
+
+public class Teacher : Person
+{
+    public string Subject { get; set; }
+
+    public void Teaches()
+    {
+
+        Console.WriteLine(Name + "Teaches Computer Science");
+    }
+    static void Main()
+    {
+
+        Teacher t = new Teacher();
+        t.Name = "Niti";
+
+        t.Teaches(); // From child class i.e Teacher
+        t.Display(); // From Base class i.e. Person
+        
+    }
+
+}
+
+// there is HR --NameOFHR{get; set;} virtual SalaryDisplay() , AdminIncharge override , Employee  Employee e = new Employee(); e.SalaryDisplay()
+
+
+
+
+//Multiple Inheritance
+
+using school;
+public interface ICurricularActivities
+{
+
+
+    void Stream();
+}
+
+public interface INonCurricularActivities
+{
+
+    void Activities();
+}
+
+public class Student : Person, ICurricularActivities, INonCurricularActivities
+{
+
+    public int RollNumber { get; set; }
+    public void Study()
+    {
+
+    }
+    public void Stream()
+    {
+        Console.WriteLine("Taken Science Stream");
+    }
+
+    public void Activities()
+    {
+        Console.WriteLine("Sports - BasketBall");
+    }
+
+
+    static void Main()
+    {
+
+        Student s = new Student();
+        Console.WriteLine("Enter the name of student");
+        string sname = Console.ReadLine();
+        s.Name = sname;
+        s.Study();
+        s.Display();
+        s.Stream();
+        s.Activities(); 
+    }
+}
+
+
+
+
+
+// // /*method overriding -- where some methods in base class and in inherited or child class are with the same name
+// // run time  binding -- when compiler will identify which method
+// // needs to be called at run time when the object will be created*/
+
+// //Method Overriding in Polymorphism can be done using virtual + override keyword
+// public class Person
+// {
+
+//     public void GetRole()
+//     {
+
+//         Console.WriteLine("Person class");
+
+//     }
+
+// }
+
+// public class Teacher : Person
+// {
+
+//     //Generally it's overriden but you are hiding that method in the inherited class
+//     public  void GetRole()
+//     {
+
+//         Console.WriteLine("She is a teacher");
+
+//     }
+
+// }
+
+// public class Mother : Person
+// {
+
+//     //Generally it's overriden but you are hiding that method in the inherited class
+//     public  void GetRole()
+//     {
+
+//         Console.WriteLine("She is a Mother");
+
+//     }
+
+// }
+
+// public class MainProgram
+// {
+
+//     static void Main()
+//     {
+//         //Late Binding - RunTime Polymorphism
+//         Person p = new Teacher();
+//         Person p1 = new Mother();
+
+//         p.GetRole();
+//         p1.GetRole();
+//     }
+// }
+
+// // both are having the Car() method but without virtual and override keyword it's not overriding -- they just hide 
+
+
+
+
+
+public class Student
+{
+
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public Dictionary<string, int> SubjectMarks { get; set; }
+    public Student(int id, string name, Dictionary<string, int> subjectMarks)
+    {
+        ID = id;
+        Name = name;
+        SubjectMarks = subjectMarks;
+    }
+
+    public double GetAverage()
+    {
+
+        int total = 0;
+        foreach (var marks in SubjectMarks.Values)
+        {
+
+            total += marks;
+        }
+        return (double)total / SubjectMarks.Count;
+    }
+    public void Display()
+    {
+
+        //code to display
+
+        Console.WriteLine("Student id:" + ID);
+        Console.WriteLine("Student name:" + Name);
+
+        Console.WriteLine("Student Marks:");
+        foreach (var subject in SubjectMarks)
+        {
+            Console.WriteLine(subject.Key + " " + subject.Value);
+        }
+
+        Console.WriteLine("Average Marks :" + GetAverage());
+    }
+
+}
+
+
+
+using System;
+using System.Collections.Generic;
+
+class StudentReport
+{
+
+
+    static void Main()
+    {
+        List<Student> studentList = new List<Student>();
+        Console.WriteLine("How many students you want to add");
+        int studentCount = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < studentCount; i++)
+        {
+            Console.WriteLine("Enter Student ID:");
+            int id = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Student Name:");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Enter Number of subjects:");
+            int subjectCount = int.Parse(Console.ReadLine());
+
+            Dictionary<string, int> subjectDictionary = new Dictionary<string, int>();
+
+
+            for (int j = 0; j < subjectCount; j++)
+            {
+
+                Console.WriteLine("Enter name of subject:" + (j + 1));
+                string subject = Console.ReadLine();
+
+                Console.WriteLine("Enter marks of subject:" + subject);
+                int marks = int.Parse(Console.ReadLine());
+
+                subjectDictionary.Add(subject, marks);
+
+            }
+
+
+            Student student = new Student(id, name, subjectDictionary);
+            studentList.Add(student);
+
+            foreach (var studentdata in studentList)
+            {
+                studentdata.Display();
+            }
+        }
+
+
+
+
+    }
+}
+
+Disadvantages of using Arrays in C#:
+1) array size is fixed
+2) we can store similar type of elements
+3) as we know the array size is fixed  so, if we allocate more memory then it will go waste even if there is no requirement and 
+if we allocate less memory that it will create a problem.
+4) We cannot insert an element into the middle of an array  .
+4) Searching based linear approach and if we have a large list to search with  .
+
+Collections gives an advantage over an Arrays 
+1) It is dynamic in nature
+2) group  of records / objects for which we are treating it as a one single unit
+3) Collections are data structures which is used to store , manage and manipulated groups of 
+related objects. 
+
+They are the part of System.Collections and System.Collections.Generic namespaces
+
+Non -generic type of collections:
+ArrayList  -- which is a resizable array(Stores object)
+HashTable -- Key-Value pair , unordered
+Stack -- LIFO structure
+Queue -- FIFO structure
+
+List l = new ArrayList();
+disadvantage  -- No Type safety  and no of time it requires boxing/ unboxing
+
+Generic type of collections 
+List<T>  Dynamic array of a specific type (Integer , String )
+Dictionary<K,V> - storing the key-value storage
+HashSet<T>   No duplicates allowed
+Queue<T> FIFO
+StacK<T> - LIFO
+SortedList<K,V>  Sorted key-value
+LinkedList<T>  Doubly linked list 
+ObservableCollections<T> - Notify when data changes(WPF)
+
+
+

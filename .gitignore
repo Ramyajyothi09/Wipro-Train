@@ -1,0 +1,11 @@
+*.user
+*.suo
+*.db
+*.log
+*.sln
+obj
+bin
+*.dll
+*vs
+*csproj
+Day15
